@@ -1,0 +1,6 @@
+This is a copy of Mike Weiblen's osgVRPN plugin - see 
+http://osgtoy.svn.sourceforge.net/viewvc/osgtoy/osgvrpn/
+
+If you are trying stereo, use OSG_STEREO = ON and OSG_STEREO_MODE = QUAD_BUFFER (or your appropriate settings).
+
+--
