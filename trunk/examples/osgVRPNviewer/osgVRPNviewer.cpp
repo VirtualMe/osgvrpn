@@ -62,6 +62,18 @@ static void setDirectionalClearColor( osgViewer::Viewer& viewer )
 }
 #endif
 
+//class ButtonUpdateCB : public osg::NodeCallback
+//{
+//	private:
+//		double _angle;
+//	public:
+//		ButtonUpdateCB() { _angle = 0.0; }
+//		virtual void operator() (osg::Node* node, osg::NodeVisitor nv)
+//		{
+//			osgVRPN::Button* button ( dynamic_cast<osgVRPN::Button*> node
+//		}
+//};
+
 ///////////////////////////////////////////////////////////////////////////
 
 static osgVRPN::TrackerBase* trackerFactory( osgViewer::Viewer* viewer = 0 )

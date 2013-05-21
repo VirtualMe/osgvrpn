@@ -12,6 +12,11 @@ SET( LIB_PUBLIC_HEADERS
     ${HEADER_PATH}/Tracker.h
     ${HEADER_PATH}/TrackerManipulator.h
     ${HEADER_PATH}/TrackerTransform.h
+    ${HEADER_PATH}/DeviceBundle.h
+    ${HEADER_PATH}/DevicesCallback.h
+    ${HEADER_PATH}/VRManipulator.h
+    ${HEADER_PATH}/VRTracker.h
+    ${HEADER_PATH}/WalledModeHandler.h
     ${HEADER_PATH}/Version.h
 )
 
@@ -24,7 +29,10 @@ ADD_SHARED_LIBRARY_INTERNAL( ${LIB_NAME}
     Tracker.cpp
     TrackerManipulator.cpp
     TrackerTransform.cpp
-    Version.cpp
+    DeviceBundle.cpp
+    VRManipulator.cpp
+    VRTracker.cpp
+    WalledModeHandler.cpp
     Version.cpp
 )
 

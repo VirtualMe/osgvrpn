@@ -1,3 +1,4 @@
+
 /* file:        src/osgVRPN/Analog.cpp
  * author:      Mike Weiblen
  * copyright:   (C) 2003-2006 Michael Weiblen http://mew.cx/

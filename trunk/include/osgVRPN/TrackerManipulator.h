@@ -10,7 +10,7 @@
 
 #include <osg/ref_ptr>
 #include <osg/Matrixd>
-#include <osgGA/MatrixManipulator>
+#include <osgGA/CameraManipulator>
 #include <osgGA/GUIEventAdapter>
 #include <osgGA/GUIActionAdapter>
 #include <osgVRPN/TrackerBase.h>
@@ -24,7 +24,7 @@ It may be attached to an osgViewer::Viewer as a CameraManipulator
 to control the position of the camera.
 */
 
-class OSGVRPN_EXPORT TrackerManipulator : public osgGA::MatrixManipulator
+class OSGVRPN_EXPORT TrackerManipulator : public osgGA::CameraManipulator
 {
 public:
     TrackerManipulator( osg::ref_ptr<TrackerBase> tracker = 0 );
@@ -37,8 +37,8 @@ public:
     void setByInverseMatrix(const osg::Matrixd& matrix) {}
 
     /** Query the position of this manipulator. */
-    osg::Matrixd getMatrix() const;
-    osg::Matrixd getInverseMatrix() const;
+    virtual osg::Matrixd getMatrix() const;
+    virtual osg::Matrixd getInverseMatrix() const;
 
     /** Set/get the Node that determines this manipulator's origin */
     void setNode(osg::Node*);

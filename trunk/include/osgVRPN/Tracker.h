@@ -28,19 +28,18 @@ class OSGVRPN_EXPORT Tracker : public TrackerBase
 {
 public:
     Tracker( const char* deviceName, int sensorID = -1 );
+    virtual ~Tracker();
 
     /** Update our state from the device. */
-    void update();
+    virtual void update();
 
     /** Query the tracker's transform matrix */
     const osg::Matrixd getMatrix() const;
     const osg::Matrixd getInverseMatrix() const;
 
 protected:      // methods
-    ~Tracker();
-
     static void VRPN_CALLBACK s_ChangeHandler( void* userdata, const vrpn_TRACKERCB info );
-    void changeHandler( const vrpn_TRACKERCB& info );
+    virtual void changeHandler( const vrpn_TRACKERCB& info );
 
 protected:      // data
     vrpn_Tracker_Remote* const  _vrpnTracker;

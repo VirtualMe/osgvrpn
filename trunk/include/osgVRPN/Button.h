@@ -40,6 +40,9 @@ public:
     /** Get state of a button */
     bool getButtonState( int buttonId ) const;
 
+	/** Get number of buttons */
+	unsigned int getNumButtons() ;
+
 protected:      // methods
     ~Button();
 

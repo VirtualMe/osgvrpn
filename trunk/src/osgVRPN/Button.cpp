@@ -55,8 +55,20 @@ void Button::changeHandler( const vrpn_BUTTONCB& info )
 {
     int buttonId = info.button;
     bool state = (info.state == VRPN_BUTTON_ON);
-    _buttonStates[buttonId] = state;
+	_buttonStates[buttonId] = state;
     ++_eventCounter;
+}
+
+unsigned int Button::getNumButtons()
+{	
+	int numbuttons=0;
+	for(ButtonStateMap::iterator iter=_buttonStates.begin();
+		iter!=_buttonStates.end(); iter++)
+	{
+		if((*iter).first>=numbuttons)
+			numbuttons=(*iter).first + 1;
+	}
+	return numbuttons;
 }
 
 // vim: set sw=4 ts=8 et ic ai:
